@@ -1,11 +1,26 @@
-.header-item:hover {
-    color: #bba151!important;
-    /* border-bottom: 2px solid #F8F9FA;
-    padding-bottom: 10px; */
+.header-color {
+    background-color: #000000;
 }
 
-.header-btn{
-    background-color: #bba151 !important;
-    color: #F8F9FA;
-    
+.user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+}
+
+.header-section:hover {
+    background-color: #bba151;
+    color: #000000 !important;
+    padding: 10px 10px;
+    border-radius: 15px;
+}
+
+.dropdown-toggle::after {
+    color: white !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: -35px;
+
 }

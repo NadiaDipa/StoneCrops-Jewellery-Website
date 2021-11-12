@@ -1,0 +1,69 @@
+body {
+    background-color: whitesmoke;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.forget-pass {
+    margin-left: 255px;
+}
+
+.login-form small {
+    text-align: center;
+    color: #388EB3;
+}
+
+.login-header {
+    text-align: center;
+    color: #BB1070;
+}
+
+
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+    background-color: #BB1070;
+    border-radius: 10px;
+}
+
+.submit-btn:hover {
+
+    border: 2px solid #BB1070;
+    border-radius: 10px;
+    color: white;
+
+}
+
+.btn-regular {
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 10px 15px;
+    color: #ecf1f3;
+
+}
+
+.btn-regular:hover {
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+
+}
+
+
+/* .from {
+    margin-right: 200px;
+    margin-left: 200px;
+    padding: 50px;
+}
+/* .contact-img {
+    margin-left: 440px;
+} */
