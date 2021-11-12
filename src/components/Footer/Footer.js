@@ -92,7 +92,10 @@ const Footer = () => {
                            
                             </div>
                         <section class="">
-                                                        {/* Facebook */}
+                           
+                            
+
+                            {/* Facebook */}
                             <a class="btn btn-primary btn-floating m-1" style={{backgroundColor: '#3b5998'}} href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
 
                             {/* Twitter  */}

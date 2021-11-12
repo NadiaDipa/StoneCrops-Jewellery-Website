@@ -10,9 +10,9 @@ import Home from './components/Home/Home/Home';
 // import AddServices from './components/AddServices/AddServices';
 import NotFound from './components/Not Found/NotFound';
 import Footer from './components/Footer/Footer';
-// import Register from './components/Login/Login/Register/Register';
-import Login from './components/Login/Login/Login';
-import Register from './components/Login/Register/Register';
+
+import Services from './components/Home/Services/Services';
+
 
 
 function App() {
@@ -28,13 +28,17 @@ function App() {
             <Route path="/home">
              <Home></Home>
             </Route>
+         
+           <Route path="/services">
+             <Services></Services>
+            </Route>
 
-            <Route path = "/login" >
+            {/* <Route path = "/login" >
               <Login></Login>
             </Route>
              <Route path = "/register" >
               <Register></Register>
-            </Route>
+            </Route> */}
    
             {/* <PrivateRoute path = "/booking/:serviceId" >
               <Booking></Booking>

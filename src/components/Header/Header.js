@@ -36,7 +36,6 @@ const Header = () => {
                                     <NavLink className="ms-4 text-decoration-none nav-item text-light fw-bold header-section" to="/add-services">Add Services</NavLink>
                                     <NavLink className="ms-4 me-4 text-decoration-none nav-item text-light fw-bold header-section" to="/my-orders">My Orders</NavLink>
                                         
-
                                     <NavDropdown title={<img className="user-photo" src={user.photoURL} alt="user" />} id="basic-nav-dropdown">
                                     <NavDropdown.Item className="nav-login text-dark fw-bold" to="">{user.displayName}</NavDropdown.Item>
                                             <NavDropdown.Item className="nav-login fs-5" to=""><Button variant="dark" style={{ backgroundColor:'#bba151',color: '#000000' , fontSize: 17, fontWeight:"bold"}} onClick={logOut}>Log Out</Button> </NavDropdown.Item>
