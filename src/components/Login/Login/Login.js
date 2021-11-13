@@ -1,158 +1,69 @@
-// import React from 'react';
-// import { useHistory, useLocation } from 'react-router';
-// import useFirebase from '../../../hooks/useFirebase';
-
-
-
-
-// const Login = () => {
-//    const { handleGoogleSignIn, setError , setIsLoading} = useFirebase();
-//     const history = useHistory();
-//     const location = useLocation();
-//     const redirect_url = location.state?.from || '/home'
-//     const signInUsingGoogle = () => {
-//         handleGoogleSignIn()
-//             .then(result => {
-//                 history.push(redirect_url)
-//             })
-//             .catch((error) => {
-//                 const errorMessage = error.message;
-//                 setError(errorMessage);
-//             })
-//             .finally(() => {
-//                 setIsLoading(false);
-//             })
-//     }
-//     return (
-//         <div className="google-button w-50 mt-5 px-5 py-5 mx-auto shadow bg-dark">
-//             <h1 className="mb-4 fs-3 mt-2 text-danger">Login Using <span className="text-Warning">Google</span></h1>
-//             <button className="google-sign-in btn btn-outline-danger" onClick={signInUsingGoogle}><i className="fab fa-google fs-3 me-2 google-sign"></i> Google Login</button>
-//         </div>
-//     );
-// };
-
-// export default Login;
-
-
-
-
-
-
-
-
-
-// import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-
-// const Login = () => {
-//     const [loginData, setLoginData] = useState({})
-//     const handleOnChange= e => {
-//         const field = e.target.name;
-//         const value = e.target.value;
-//         // console.log(field, value)
-//         const newLoginData = { ...loginData };
-//         newLoginData[field] = value;
-//         setLoginData(newLoginData);
-        
-
-//     }
-//     const handleLoginSubmit = e => {
-        
-//         e.preventDefault();
-//     }
-//     return (
-//         <div class="container">
-//             <div class="row row-cols-2">
-//                 <div class="col">
-//                     <form onSubmit={handleLoginSubmit}>
-//                 <div className="mb-4">
-//                     <p className="text-center">Welcome Back</p>
-//                     <h2 className="login-header">Login to your account</h2>
-//                     <hr />
-//                 </div>
-                        
-
-//                 {/* email input field */}
-//                 <div className="mb-3">
-//                     <label for="exampleInputEmail1" className="form-label">Email address</label>
-//                     <input required onBlur="" type="email"
-//                     name="email"
-//                     onChange={handleOnChange}
-//                     className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />      
-//                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-//                 </div>
-                        
-
-
-//                 {/* password input field */}
-//                 <div className="mb-3">
-//                     <label for="exampleInputPassword1" className="form-label">Password</label>
-//                     <input onBlur="" type="password" name="password"
-//                     onChange={handleOnChange} className="form-control" id="exampleInputPassword1" required />
-                 
-//                 </div>
-                        
-
-
-//                 <div className="mb-3 form-check">
-//                     <input onBlur="" type="password"
-//                     name="password"
-//                     onChange={handleOnChange}
-//                     className="form-check-input" id="exampleCheck1" />
-//                     <label className="form-check-label" for="exampleCheck1">Keep me logged in</label>
-                    
-//                     <Link style={{textDecoration:'none'}} className="forget-pass"> Forget Your Password?</Link>
-                    
-//                 </div>
-//                     <button type="submit" className="btn btn-primary">Submit</button>
-//                     {/* <NavLink  to="/register"></NavLink>
-//                     <Button variant="text">New User? Please Register</Button> */}
-//                     <p> Don't have an account? <Link style={{textDecoration:'none'}} to="/register">New User? Please Register</Link></p>
-                
-//             </form>
-//                 </div>
-//                 <div class="col">Yes I'm here</div>
-//             </div>
-//         </div>      
-//     );
-// };
-
-// export default Login;
-
-
-
-
-
-import React from 'react';
-import { useHistory, useLocation } from 'react-router';
-import useFirebase from '../../../Hook/useFirebase';
-
-
-
+import React, { useState } from 'react';
+import { Button, Spinner } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import useAuth from '../../../Hook/useAuth';
 
 const Login = () => {
-   const { handleGoogleSignIn, setError , setIsLoading} = useFirebase();
-    const history = useHistory();
-    const location = useLocation();
-    const redirect_url = location.state?.from || '/home'
-    const signInUsingGoogle = () => {
-        handleGoogleSignIn()
-            .then(result => {
-                history.push(redirect_url)
-            })
-            .catch((error) => {
-                const errorMessage = error.message;
-                setError(errorMessage);
-            })
-            .finally(() => {
-                setIsLoading(false);
-            })
+    const [loginData, setLoginData] = useState({});
+    const { user, loginUser, isLoading, authError } = useAuth();
+    const handleOnChange = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newLoginData = { ...loginData };
+        newLoginData[field] = value;
+        setLoginData(newLoginData);
+        
+    }
+
+    const handleLoginSubmit = e => {
+        loginUser(loginData.email, loginData.password);
+        e.preventDefault();
     }
     return (
-        <div className="google-button w-50 mt-5 px-5 py-5 mx-auto shadow bg-dark">
-            <h1 className="mb-4 fs-3 mt-2 text-danger">Login Using <span className="text-Warning">Google</span></h1>
-            <button className="google-sign-in btn btn-outline-danger" onClick={signInUsingGoogle}><i className="fab fa-google fs-3 me-2 google-sign"></i> Google Login</button>
+        
+        <div class="container">
+            <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="login-form bg-light mt-4 p-4">
+                    <form onSubmit={handleLoginSubmit} method="" class="row g-3">
+                        <h4>Welcome Back</h4>
+                        <div class="col-12">
+                            <label>Username</label>
+                            <input type="text" name="email"
+                            onChange={handleOnChange}
+                            class="form-control" placeholder="Username"/>
+                        </div>
+                        <div class="col-12">
+                            <label>Password</label>
+                            <input type="password" name="password"
+                            onChange={handleOnChange}
+                            class="form-control" placeholder="Password" />
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe"/>
+                                <label class="form-check-label" for="rememberMe"> Remember me</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" to="/login" class="btn btn-dark float-end">Login</button>
+                        </div>
+                    </form>
+                    <hr class="mt-4" />
+                    <div class="col-12">
+                        <NavLink to="/register" class="text-center mb-0" style={{textDecoration: 'none'}}>Have not account yet? <Button to="/register" variant="text">Signup</Button></NavLink>
+                    </div>
+                        {isLoading && <Spinner animation="grow" />}
+                        {user?.email && <div class="alert alert-success" role="alert">
+                        Login Successful!
+                        </div>}
+                        {authError && <div class="alert alert-success" role="alert">
+                        {authError}</div>}
+                </div>
+            </div>
         </div>
+    </div>
+    
     );
 };
 

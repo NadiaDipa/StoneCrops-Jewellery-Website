@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { Button, Spinner } from 'react-bootstrap';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import useAuth from '../../../Hook/useAuth';
 
 const Register = () => {
-    const [loginData, setLoginData] = useState({})
+    const [loginData, setLoginData] = useState({});
+
+    const {user, registerUser, isLoading, authError} = useAuth();
+
     const handleOnChange= e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -15,70 +20,55 @@ const Register = () => {
     }
     const handleLoginSubmit = e => {
         if (loginData.password !== loginData.password2) {
-            alert('Your password did not match')
+            alert('Your password did not match');
             return
         }
+        registerUser(loginData.email, loginData.password);
         e.preventDefault();
     }
     return (
          <div class="container">
-            <div class="row row-cols-2">
-                <div class="col">
-                    <form onSubmit={handleLoginSubmit}>
-                <div className="mb-4">
-                    <p className="text-center">Welcome Back</p>
-                    <h2 className="login-header">Register</h2>
-                    <hr />
-                </div>
-                        
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="signup-form">
+               {!isLoading && <form onSubmit={handleLoginSubmit} class="mt-5 border p-4 bg-light shadow">
+                    <h4 class="mb-5 text-secondary">Create Your Account</h4>
+                    <div class="row">
+                       
 
-                {/* email input field */}
-                <div className="mb-3">
-                    <label for="exampleInputEmail1" className="form-label">Email address</label>
-                    <input required onBlur="" type="email"
-                    name="email"
-                    onChange={handleOnChange}
-                    className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />      
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                        
+                        <div class="mb-3 col-md-6">
+                            <label>email<span class="text-danger">*</span></label>
+                            <input type="email" name="email"
+                            onChange={handleOnChange} class="form-control" placeholder="Enter Email"/>
+                        </div>
+
+                        <div class="mb-3 col-md-12">
+                            <label>Password<span class="text-danger">*</span></label>
+                            <input type="password" name="password" onChange={handleOnChange} class="form-control" placeholder="Enter Password"/>
+                        </div>
+                        <div class="mb-3 col-md-12">
+                            <label>Confirm Password<span class="text-danger">*</span></label>
+                            <input type="password" name="password2" onChange={handleOnChange} class="form-control" placeholder="Confirm Password"/>
+                        </div>
+                        <div class="col-md-12">
+                           <button class="btn btn-primary float-end">Signup</button>
+                        </div>
+                    </div>
+                    </form>}
+                        {isLoading && <Spinner animation="border" />}
+                        {user?.email && <div class="alert alert-success" role="alert">
+                        User Created Successfully!
+                        </div>}
+                        {authError && <div class="alert alert-success" role="alert">
+                        {authError}
+                        </div>}
 
 
-                {/* password input field */}
-                <div className="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">Password</label>
-                    <input onBlur="" type="password" name="password"
-                    onChange={handleOnChange} className="form-control" id="exampleInputPassword1" required />
-
-                    {/* retype-password */}
-                    <label for="exampleInputPassword1" className="form-label">Re-type Your Password</label>
-                    <input onBlur="" type="password" name="password2"
-                    onChange={handleOnChange} className="form-control" id="exampleInputPassword1" required />
-                 
-                </div>
-                        
-
-
-                <div className="mb-3 form-check">
-                    <input onBlur="" type="password"
-                    name="password"
-                    onChange={handleOnChange}
-                    className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" for="exampleCheck1">Keep me logged in</label>
-                    
-                    <Link style={{textDecoration:'none'}} className="forget-pass"> Forget Your Password?</Link>
-                    
-                </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                    {/* <NavLink  to="/register"></NavLink>
-                    <Button variant="text">New User? Please Register</Button> */}
-                    <p> Already Registered? <Link style={{textDecoration:'none'}} to="/login"> Please Login</Link></p>
-                
-            </form>
-                </div>
-                <div class="col">Yes I'm here</div>
+                        <NavLink to="/login" class="text-center mb-0" style={{textDecoration: 'none'}}>Have not account yet? <Button to="/login" variant="text">Login</Button></NavLink>
             </div>
-        </div>      
+        </div>
+    </div>
+</div>
     );
 };
 

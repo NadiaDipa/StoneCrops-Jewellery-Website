@@ -2,12 +2,13 @@ import React from 'react';
 import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 // import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../Hook/useAuth';
 import logo from "./../../logo.png";
 import './Header.css';
 
 
 const Header = () => {
-   
+    const {user, logout} = useAuth();
     return (
         <div>
             <Navbar className="header-color" expand="lg">
@@ -20,7 +21,27 @@ const Header = () => {
                         <NavLink className="ms-4 text-decoration-none nav-item text-light fw-bold header-section" to="/manage-orders">Manage Orders</NavLink>
                         <NavLink className="ms-4 text-decoration-none nav-item text-light fw-bold header-section" to="/add-services">Add Services</NavLink>
                         <NavLink className="ms-4 me-4 text-decoration-none nav-item text-light fw-bold header-section" to="/my-orders">My Orders</NavLink>
-                        <NavLink className="ms-4 text-decoration-none nav-item text-light fw-bold" to="/login">Log In</NavLink>
+
+                        
+                        {
+                            user?.email ?
+                            <NavLink onClick={logout} className="ms-4 text-decoration-none nav-item text-light fw-bold" to="/logout">Logout</NavLink>
+
+                            :
+                            <NavLink className="ms-4 text-decoration-none nav-item text-light fw-bold" to="/login">Log In</NavLink>
+
+                        }
+
+
+
+
+
+
+
+
+
+
+
                         {/* <Nav Nav className = "ms-auto d-flex align-items-center"
                         style = {
                             {

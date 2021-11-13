@@ -12,13 +12,17 @@ import NotFound from './components/Not Found/NotFound';
 import Footer from './components/Footer/Footer';
 
 import Services from './components/Home/Services/Services';
+import Login from './components/Login/Login/Login';
+import Register from './components/Login/Register/Register';
+import AuthProvider from './Contexts/AuthProvider/AuthProvider';
 
 
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <AuthProvider>
+         <Router>
         <Header></Header>
           <Switch>
             <Route exact path ="/">
@@ -29,8 +33,14 @@ function App() {
              <Home></Home>
             </Route>
          
-           <Route path="/services">
+            <Route path="/services">
              <Services></Services>
+            </Route>
+            <Route path = "/login" >
+              <Login></Login>
+            </Route>
+            <Route path = "/register" >
+              <Register></Register>
             </Route>
 
             {/* <Route path = "/login" >
@@ -64,6 +74,7 @@ function App() {
         <Footer></Footer>
       </Router>
      
+      </AuthProvider>
     </div>
   );
 }
