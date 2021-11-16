@@ -11,6 +11,8 @@ import Booking from './components/Home/Booking/Booking';
 import Registration from './components/Login/Registration/Registration';
 import Home from './components/Home/Home/Home';
 import Footer from './components/Footer/Footer';
+import DashboardNav from './components/Dashboard/DashboardNav/DashboardNav';
+
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home />
+            </Route>
+            <Route path="/dashboardnav">
+              <DashboardNav />
             </Route>
             <Route path="/booking/:id">
               <Booking />
