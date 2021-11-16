@@ -10,13 +10,14 @@ import Login from './components/Login/Login/Login';
 import Booking from './components/Home/Booking/Booking';
 import Registration from './components/Login/Registration/Registration';
 import Home from './components/Home/Home/Home';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
      <div className="App">
       <AuthProvider>
         <Router>
-          <Navigation />
+            <Navigation />
           <Switch>
             <Route exact path="/">
               <Home />
@@ -34,6 +35,7 @@ function App() {
               <Registration />
             </Route>
           </Switch>
+          <Footer />
         </Router>
       </AuthProvider>
     </div>
