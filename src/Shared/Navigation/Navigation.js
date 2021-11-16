@@ -24,7 +24,7 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/explore" className="text-light fs-6 me-2 fw-bold">
               Explore
             </Nav.Link>
-            <Nav.Link as={Link} to="/dashboardnav" className="text-light fs-6 me-2 fw-bold">
+            <Nav.Link as={Link} to="/dashboard" className="text-light fs-6 me-2 fw-bold">
               DashBoard
             </Nav.Link>
 

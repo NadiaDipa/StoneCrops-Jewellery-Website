@@ -11,7 +11,12 @@ import Booking from './components/Home/Booking/Booking';
 import Registration from './components/Login/Registration/Registration';
 import Home from './components/Home/Home/Home';
 import Footer from './components/Footer/Footer';
-import DashboardNav from './components/Dashboard/DashboardNav/DashboardNav';
+
+import Explore from './components/Explore/Explore';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+
+
+
 
 
 function App() {
@@ -27,8 +32,11 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/dashboardnav">
-              <DashboardNav />
+             <Route path="/explore">
+              <Explore />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard />
             </Route>
             <Route path="/booking/:id">
               <Booking />
