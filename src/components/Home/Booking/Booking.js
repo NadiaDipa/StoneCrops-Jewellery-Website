@@ -46,7 +46,7 @@ const Booking = () => {
   return (
     <div className="container-fluid order-section" style={{backgroundColor:'#424243'}}>
       <div className="container py-5">
-        <h1 className="text-center mb-3 fw-bold text-white">
+        <h1 className="text-center mb-5 fw-bold border-light border-bottom w-50 mx-auto" style={{ color: '#bba151' }}>
           PLACE YOUR ORDER
         </h1>
         <div className="row mx-auto align-items-center">
@@ -60,23 +60,20 @@ const Booking = () => {
                     alt="..."
                   />
                 </div>
-                <div className="col-md-8">
-                  <div className="card-body text-center">
-                    <h5 className="card-title ">{products?.name}</h5>
+                  <div className="col-md-8">
+                    <div className="card-body text-center">
+                      <h5 className="card-title ">{products?.name}</h5>
 
-                    
-                    <p className="card-text m-0">
-                      Model: {products?.description}
-                    </p>
-                    
-                    <p className="card-text m-0">
-                      Price: {products?.price}.
-                    </p>
+                      
+                      <p className="card-text m-0">
+                        Model: {products?.description}
+                      </p>
+                      
+                      <p className="card-text m-0">
+                        Price: {products?.price}.
+                      </p>
 
-                    
-
-                   
-                  </div>
+                    </div>
                 </div>
               </div>
             </div>
@@ -93,12 +90,14 @@ const Booking = () => {
               <input
                 className="p-2 m-2 w-50"
                 defaultValue={displayName}
-                {...register("Name")}
+                placeholder="Enter Your Name"
+                {...register("Enter Your Name")}
               />
 
               <input
                 className="p-2 m-2 w-50"
                 defaultValue={email}
+                placeholder="Enter Your Email"
                 {...register("email", { required: true })}
               />
               {errors.email && (
@@ -106,13 +105,13 @@ const Booking = () => {
               )}
               <input
                 className="p-2 m-2 w-50"
-                placeholder="Address"
+                placeholder="Enter Your Address"
                 defaultValue=""
                 {...register("address")}
               />
               <input
                 className="p-2 m-2 w-50"
-                placeholder="City"
+                placeholder="Enter Your Current City"
                 defaultValue=""
                 {...register("city")}
               />
