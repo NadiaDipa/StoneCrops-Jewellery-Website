@@ -57,7 +57,7 @@ const Dashboard = () => {
                         <hr />
                         <Link to={`${url}/reviews`}><h5>Add Feedback</h5></Link>
                         <hr />
-                        <Link><Button onClick={logOut} >Logout</Button></Link>
+                        <Button onClick={logOut} >Logout </Button>
                     </div>
 
                     <div className="col-md-9 border">

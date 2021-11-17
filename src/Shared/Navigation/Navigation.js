@@ -30,14 +30,14 @@ const Navigation = () => {
 
             {!user.email ? (
               <>
-                <Nav.Link as={Link} to="/login">
+                <Nav.Link as={Link} to="/login" className="text-light">
                   Login
                 </Nav.Link>
               </>
             ) : (
               <button
                 onClick={logOut}
-                className="btn btn-outline-secondary fw-bold"
+                className="btn btn-secondary fw-bold"
               >
                 Log Out
               </button>

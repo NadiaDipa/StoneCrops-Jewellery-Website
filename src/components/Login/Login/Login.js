@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import { useHistory, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
 import loginImg from "./../../../assets/login-img.jpg";
 
@@ -22,7 +23,7 @@ const Login = () => {
   const location = useLocation();
   const redirect = location?.state?.from || "/home";
   return (
-        <div style={{backgroundColor:'#424243'}}>
+        <div className="pb-5" style={{backgroundColor:'#424243'}}>
             <div class="row">
               <div class="col">
                 <img className="img-fluid" height="550px" width="100%" src ={loginImg}
@@ -49,7 +50,7 @@ const Login = () => {
                               const user = result.user;
                               setUser(user);
                               setError("");
-                              alert("Login successful");
+                              Swal.fire("Login successful");
                               history.push(redirect);
                             })
                             .catch((error) => {
