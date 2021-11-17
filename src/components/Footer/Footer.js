@@ -5,7 +5,7 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div>
-            <footer className="footer">
+            <footer className="footer" style={{backgroundColor:'#010101'}}>
                 {/* form */}
                         <section class="">
                             <form action="">

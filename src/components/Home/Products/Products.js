@@ -24,9 +24,10 @@ const Products = () => {
   return (
     <Container className="mt-5">
       <div>
-        <h1 className="text-center fw-bold mb-5">
-          <span className="text-info">OUR</span> PRODUCTS
+        <h1 className="text-center fw-bold">
+          <span className="border-bottom border-dark" style={{ color: '#000002', letterSpacing: '5px' }}>CATEGORIES</span>
         </h1>
+          <h5 className="mb-4" style={{letterSpacing:'5px', color: '#000002'}}>What We Make</h5>
       </div>
 
       <div className="row">

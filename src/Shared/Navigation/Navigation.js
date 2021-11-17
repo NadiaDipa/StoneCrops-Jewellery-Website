@@ -8,11 +8,11 @@ import logo from "./../../logo.png";
 const Navigation = () => {
   const { user, logOut } = useAuth();
   return (
-    <Navbar style={{backgroundColor: '#0C0C10', height:'80px'}} expand="lg">
+    <Navbar style={{backgroundColor: '#010101', height:'80px'}} expand="lg">
       <Container>
         <Navbar.Brand as={Link} to="/home" className="fw-bold fs-2" >
           <img width="80px" src={logo} alt="" />{" "}
-          <span className='text-light'>Stone</span> <span style={{color: '#bba151'}}>Crops</span>
+          <span className='text-light' style={{letterSpacing:'5px'}}>STONE</span> <span style={{color: '#bba151',letterSpacing:'5px'}}>CROPS</span>
         </Navbar.Brand>
         
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

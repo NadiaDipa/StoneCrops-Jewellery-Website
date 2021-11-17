@@ -44,7 +44,7 @@ const Booking = () => {
   const { user } = useAuth();
   const { email, displayName } = user;
   return (
-    <div className="container-fluid order-section">
+    <div className="container-fluid order-section" style={{backgroundColor:'#424243'}}>
       <div className="container py-5">
         <h1 className="text-center mb-3 fw-bold text-white">
           PLACE YOUR ORDER
@@ -66,16 +66,16 @@ const Booking = () => {
 
                     
                     <p className="card-text m-0">
-                      Model: {products?.modelNumber}
+                      Model: {products?.description}
                     </p>
-                    <p className="card-text m-0">Size : {products?.Size}</p>
+                    
                     <p className="card-text m-0">
-                      Frame Material: {products?.frameMaterial}.
+                      Price: {products?.price}.
                     </p>
 
-                    <p className="card-text m-0">Usage: {products?.desc}.</p>
+                    
 
-                    <h6>Price: {products?.price}</h6>
+                   
                   </div>
                 </div>
               </div>
@@ -123,11 +123,16 @@ const Booking = () => {
                 {...register("phone")}
               />
 
-              <input
+              {/* <input
                 type="submit"
                 value="ORDER"
                 className="fw-bold text-muted p-2 m-2 w-50"
-              />
+              /> */}
+               <input
+                className="btn w-50 m-2 fs-5 fw-bold btn btn-outline-light subscribe-btn"
+                type="submit" style={{color:'#bba151', backgroundColor: '#0c0c0c'}}
+                value="ORDER"
+                />
             </form>
           </div>
         </div>
