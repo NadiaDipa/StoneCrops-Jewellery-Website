@@ -1,0 +1,10 @@
+.login-style{
+    background: linear-gradient(337deg, rgba(187, 161, 81, 1) 0%, rgba(13, 12, 16, 0.908000700280112) 32%, rgba(162, 162, 162, 1) 82%)!important;
+}
+
+.headline {
+    border-bottom: 2px solid goldenrod !important;
+    width: 50%;
+    text-align: center;
+
+}
