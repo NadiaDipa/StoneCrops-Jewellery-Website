@@ -22,7 +22,7 @@ const Login = () => {
   const location = useLocation();
   const redirect = location?.state?.from || "/home";
   return (
-        <div style={{backgroundColor:'#424243  '}}>
+        <div style={{backgroundColor:'#424243'}}>
             <div class="row">
               <div class="col">
                 <img className="img-fluid" height="550px" width="100%" src ={loginImg}

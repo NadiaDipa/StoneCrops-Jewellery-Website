@@ -6,9 +6,6 @@ const Footer = () => {
     return (
         <div>
             <footer className="footer">
-                
-
-
                 {/* form */}
                         <section class="">
                             <form action="">

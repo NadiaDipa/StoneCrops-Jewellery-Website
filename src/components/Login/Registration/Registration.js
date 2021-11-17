@@ -8,24 +8,18 @@ const Registration = () => {
     useAuth();
   const history = useHistory();
   return (
-    <div className="container-fluid my-5">
+    <div className="container-fluid pt-5 shadow-lg" style={{backgroundColor:'#424243'}}>
       <Container>
-        <div className="text-center">
+        <div className="text-light">
           <h1 style={{ letterSpacing: "3px", fontWeight: "500" }}>
             {" "}
-            <span className="text-info">REGISTER</span> HERE
+            <span style={{color:'#bba151'}}>REGISTER</span> HERE
           </h1>
-          <Link
-            className="text-info"
-            style={{ textDecoration: "none" }}
-            to="/login"
-          >
-            <small>Already Registered? Login</small>
-          </Link>
+        
         </div>
         <p className="text-danger text-center">{error}</p>
 
-        <div className="text-center mt-5">
+        <div className="text-center mt-4">
           <form
             onSubmit={(e) => {
               registerProcess(history);
@@ -60,12 +54,24 @@ const Registration = () => {
               placeholder="Re-Type password"
               className="form-control m-2 w-50 mx-auto"
             />
-            <input
+            {/* <input
               className="btn btn-outline-secondary w-50 m-2 fw-bold"
               type="submit"
               value="REGISTER"
+            /> */}
+            <input
+            className="btn w-50 m-2 fs-5 fw-bold btn btn-outline-light subscribe-btn"
+            type="submit" style={{color:'#bba151', backgroundColor: '#0c0c0c'}}
+            value="REGISTER"
             />
           </form>
+          <Link
+            className="text-light"
+            style={{ textDecoration: "none" }}
+            to="/login"
+          >
+            <small>Already Registered? <span className="fw-bold fs-6" style={{color:'#bba151'}}>Login</span></small>
+          </Link>
         </div>
       </Container>
     </div>
