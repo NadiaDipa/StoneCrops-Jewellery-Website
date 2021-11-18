@@ -13,9 +13,12 @@ const Feedback = () => {
     return (
         <div>
             <Container className="mt-5">
-                <div>
-                    <h1 className="text-center mb-5 text-info">TESTIMONIAL</h1>
-                </div>
+                    <div>
+                        <h1 className="text-center fw-bold mt-4">
+                        <span className="border-bottom border-dark" style={{ color: '#000002', letterSpacing: '5px' }}>CLIENT TESTIMONIALS</span>
+                        </h1>
+                        <h5 className="mb-4" style={{letterSpacing:'5px', color: '#000002'}}>WHAT THEY SAY</h5>
+                    </div>
 
                 <div className="row">
                     {reviews.map((review) => (

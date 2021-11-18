@@ -16,8 +16,8 @@ const Explore = () => {
                         <h1 className="text-center fw-bold mt-4">
                         <span className="border-bottom border-dark" style={{ color: '#000002', letterSpacing: '5px' }}>OUR EXCLUSIVE COLLECTION</span>
                         </h1>
-                    <h5 className="mb-4" style={{letterSpacing:'5px', color: '#000002'}}>Fashion For Move Live Every Moment</h5>
-      </div>
+                        <h5 className="mb-4" style={{letterSpacing:'5px', color: '#000002'}}>Fashion For Move Live Every Moment</h5>
+                    </div>
                   {products.map((product) => (
                     <Product key={product._id} product={product}></Product>
                 ))}

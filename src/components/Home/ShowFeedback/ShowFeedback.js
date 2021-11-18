@@ -15,7 +15,7 @@ const ShowFeedback = ({review}) => {
           <div className="card-header bg-white">
             <Rating
               readonly
-              className="text-danger"
+              style={{color:'#FDCC0D'}}
               initialRating={rating}
               emptySymbol={<FontAwesomeIcon icon={emptyStar} />}
               fullSymbol={<FontAwesomeIcon icon={fullStar} />}
@@ -35,7 +35,9 @@ const ShowFeedback = ({review}) => {
                 className="blockquote-footer fw-bold"
                 style={{ fontSize: "16px", color: "#163336" }}
               >
-                {name}, <cite title="Source Title">{city}</cite> 
+                {name}, <cite title="Source Title">{city}</cite>
+                <br />
+                <div className="fw-0"><small className="text-muted" style={{marginLeft: '190px'}}>Customer</small></div>
               </footer>
             </blockquote>
           </div>
