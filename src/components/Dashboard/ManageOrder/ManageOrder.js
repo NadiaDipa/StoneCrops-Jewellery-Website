@@ -11,7 +11,7 @@ const ManageOrder = () => {
     const [allOrders, setAllOrders] = useState([]);
     const [confirm, setConfirm] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/allOrder')
+        fetch('https://still-beach-91758.herokuapp.com/allOrder')
             .then(res => res.json())
             .then(data => setAllOrders(data))
     })
@@ -29,7 +29,7 @@ const ManageOrder = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `http://localhost:5000/allOrder/${id}`;
+        const url = `https://still-beach-91758.herokuapp.com/allOrder/${id}`;
         fetch(url, {
           method: "DELETE",
         })
@@ -63,7 +63,7 @@ const ManageOrder = () => {
       confirmButtonText: "Yes, Confirm",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/allOrder/${id}`, {
+        fetch(`https://still-beach-91758.herokuapp.com/allOrder/${id}`, {
           method: "PUT",
         })
           .then((res) => res.json())

@@ -1,3 +1,5 @@
+import { faFacebookSquare, faGithubSquare, faInstagramSquare, faTwitterSquare, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css'
@@ -88,30 +90,26 @@ const Footer = () => {
                         <div class="container">
                            
                             </div>
-                        <section class="">
-                           
-                            
-
-                            {/* Facebook */}
-                            <a class="btn btn-primary btn-floating m-1" style={{backgroundColor: '#3b5998'}} href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-
-                            {/* Twitter  */}
-                            <a class="btn btn-primary btn-floating m-1" style={{backgroundColor: '#55acee'}} href="#!" role="button"><i class="fab fa-twitter"></i></a>
-
-                            {/* Google */}
-                            <a class="btn btn-primary btn-floating m-1" style={{backgroundColor: '#dd4b39'}} href="#!" role="button"><i class="fab fa-google"></i></a>
-
-                            {/* Instagram */}
-                                <a class="btn btn-primary btn-floating m-1" style={{backgroundColor: '#ac2bac'}} href="#!" role="button"><i class="fab fa-instagram"></i></a>
-                            
-
-                            {/* Linkedin */}
-                                <a class="btn btn-primary btn-floating m-1" style={{backgroundColor: '#0082ca'}} href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-                                                
-                            {/* Github */}
-                                <a class="btn btn-primary btn-floating m-1" style={{backgroundColor: '#333333'}} href="#!"
-                                role="button"><i class="fab fa-github"></i></a>
-                        </section>
+                    <section class="">
+                           <div className="icons fs-3">
+                                <FontAwesomeIcon
+                                    className="mx-1 text-success"
+                                    icon={faFacebookSquare}
+                                />{" "}
+                                <FontAwesomeIcon
+                                    className="mx-1 text-danger"
+                                    icon={faInstagramSquare}
+                                />{" "}
+                                <FontAwesomeIcon
+                                    className="mx-1 text-info"
+                                    icon={faTwitterSquare}
+                                />{" "}
+                                <FontAwesomeIcon
+                                    className="mx-1 text-danger"
+                                    icon={faYoutubeSquare}
+                                />{" "}
+                            </div>
+                    </section>
                 </div>
                 </div>
 

@@ -2,12 +2,14 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import Fade from 'react-reveal/Fade';
 import logo from "./../../logo.png";
 
 
 const Navigation = () => {
   const { user, logOut } = useAuth();
   return (
+     <Fade top>
     <Navbar style={{backgroundColor: '#010101', height:'80px'}} expand="lg">
       <Container>
         <Navbar.Brand as={Link} to="/home" className="fw-bold fs-2" >
@@ -24,9 +26,7 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/explore" className="text-light fs-6 me-2 fw-bold">
               Explore
             </Nav.Link>
-            <Nav.Link as={Link} to="/dashboard" className="text-light fs-6 me-2 fw-bold">
-              DashBoard
-            </Nav.Link>
+          
 
             {!user.email ? (
               <>
@@ -34,18 +34,26 @@ const Navigation = () => {
                   Login
                 </Nav.Link>
               </>
-            ) : (
+              ) : (
+              <>
+                <Nav.Link as={Link} to="/dashboard" className="text-light fs-6 me-2 fw-bold">
+                DashBoard
+                </Nav.Link>
+              
+              
               <button
                 onClick={logOut}
                 className="btn btn-secondary fw-bold"
               >
                 Log Out
               </button>
+              </>
             )}
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+      </Navbar>
+    </Fade>
   );
 };
 

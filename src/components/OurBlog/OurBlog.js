@@ -10,7 +10,7 @@ const OurBlog = () => {
           
       <div class="col">
         <div class="card">
-          <img style={{height: '400px', width: '600px'}} src="https://us.123rf.com/450wm/artmim/artmim1807/artmim180700020/104807027-fashioable-jewelry-on-female-body-necklace-bracelet-and-earrings.jpg?ver=6" class="card-img-top" alt="..." />
+          <img style={{height: '400px'}} className="img-fluid" src="https://us.123rf.com/450wm/artmim/artmim1807/artmim180700020/104807027-fashioable-jewelry-on-female-body-necklace-bracelet-and-earrings.jpg?ver=6" class="card-img-top" alt="..." />
         <div class="card-body" style={{backgroundColor: '#000000'}}>
           <h5 class="card-title fs-4 fw-bold mt-4 " style={{color: '#bba151', letterSpacing:'3px'}}>Wedding Pearl Necklace for Brides White</h5>
           <small className="text-danger" style={{letterSpacing: '3px'}}>Availability In stock</small>
@@ -32,7 +32,7 @@ const OurBlog = () => {
   </div>
   <div class="col">
     <div class="card">
-      <img style={{height: '400px', width: '600px'}} src="https://m.media-amazon.com/images/I/71Xkzgoq7iS._AC_UL1500_.jpg" class="card-img-top" alt="..." />
+      <img style={{height: '400px'}} className="img-fluid" src="https://m.media-amazon.com/images/I/71Xkzgoq7iS._AC_UL1500_.jpg" class="card-img-top" alt="..." />
       <div class="card-body" style={{ backgroundColor: '#000000'}}>
         <h5 class="card-title fs-4 fw-bold mt-4" style={{color: '#bba151', letterSpacing:'3px'}}>White Freshwater Baroque Pearl Necklace</h5>                     
         <small className="text-danger" style={{letterSpacing: '3px'}}>Availability In stock</small>
@@ -56,7 +56,7 @@ const OurBlog = () => {
   </div>
   <div class="col">
     <div class="card">
-      <img style={{height: '400px', width: '600px'}} src="https://media.istockphoto.com/photos/fashion-portrait-of-young-beautiful-woman-with-jewelry-picture-id517237166?k=20&m=517237166&s=612x612&w=0&h=5ZBOrt7fes72Dkn3qGUrcK3Gh_pq_hY0veVLINhgbSY=" alt="..." />
+      <img style={{height: '400px'}} className="img-fluid" src="https://media.istockphoto.com/photos/fashion-portrait-of-young-beautiful-woman-with-jewelry-picture-id517237166?k=20&m=517237166&s=612x612&w=0&h=5ZBOrt7fes72Dkn3qGUrcK3Gh_pq_hY0veVLINhgbSY=" alt="..." />
       <div class="card-body" style={{ backgroundColor: '#000000'}}>
         <h5 class="card-title fs-4 fw-bold mt-4" style={{color: '#bba151', letterSpacing:'3px'}}>Jewelexcess Sterling Silver Gemstone Necklace</h5>
         <small className="text-muted text-light" style={{letterSpacing: '3px'}}>Stock Out</small>
@@ -79,7 +79,7 @@ const OurBlog = () => {
   <div class="col mb-4">
     <div class="card">
       
-       <img style={{height: '400px', width: '600px'}} src="https://image.freepik.com/free-photo/jewelry-concept-closeup-portrait-wedding-necklace-female-neck_8353-5905.jpg" class="card-img-top" alt="..." />
+       <img style={{height: '400px'}} className="img-fluid" src="https://image.freepik.com/free-photo/jewelry-concept-closeup-portrait-wedding-necklace-female-neck_8353-5905.jpg" class="card-img-top" alt="..." />
       <div class="card-body" style={{ backgroundColor: '#000000'}}>
         <h5 class="card-title fs-4 fw-bold mt-4" style={{color: '#bba151', letterSpacing:'3px'}}>Gem Stone Cultured Shell Pearls Necklace</h5>
         <small className="text-danger" style={{letterSpacing: '3px'}}>Availability In stock</small>

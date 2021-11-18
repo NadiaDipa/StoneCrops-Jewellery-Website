@@ -7,7 +7,7 @@ const Booking = () => {
   const { id } = useParams();
   const [products, setProducts] = useState({});
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://still-beach-91758.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
         const products = data?.find((pack) => pack?._id === id);
@@ -19,7 +19,7 @@ const Booking = () => {
   const onSubmit = (data) => {
     data.status = "pending";
     delete data._id;
-    fetch("http://localhost:5000/allOrder", {
+    fetch("https://still-beach-91758.herokuapp.com/allOrder", {
       method: "POST",
       headers: {
         "content-type": "application/json",

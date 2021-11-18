@@ -1,7 +1,7 @@
 import React from 'react';
-import necklace from './../../assets/necklace.jpg';
-import necklace4 from './../../assets/necklace4.jpg';
-import necklace5 from './../../assets/necklace5.jpg';
+import slider1 from './../../assets/slider1.jpg';
+import slider2 from './../../assets/slider2.jpg';
+import slider3 from './../../assets/slider3.jpg';
 
 const Banner = () => {
     return (
@@ -14,18 +14,18 @@ const Banner = () => {
               </div>
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <img className="img-fluid" height="550px" width="100%" src ={necklace}
+                  <img className="img-fluid" src ={slider1}
                   class = "d-block w-100"
                 alt="..." />
                   
                   </div>
                   <div className="carousel-item">
-                    <img className="img-fluid" height="580px" width="100%" src ={necklace4}
+                    <img className="img-fluid" src ={slider2}
                     class = "d-block w-100"
                     alt = "..." />
                   </div>
                   <div className="carousel-item">
-                    <img className="img-fluid" height="330px" width="100%" src={necklace5} alt="..." />
+                    <img className="img-fluid" src={slider3} alt="..." />
                   </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">

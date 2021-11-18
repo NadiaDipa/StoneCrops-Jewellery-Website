@@ -14,6 +14,7 @@ import Footer from './components/Footer/Footer';
 
 import Explore from './components/Explore/Explore';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 
 
 
@@ -38,9 +39,9 @@ function App() {
             <Route path="/dashboard">
               <Dashboard />
             </Route>
-            <Route path="/booking/:id">
+            <PrivateRoute path="/booking/:id">
               <Booking />
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>

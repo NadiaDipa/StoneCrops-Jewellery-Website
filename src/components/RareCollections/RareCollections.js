@@ -6,7 +6,7 @@ const RareCollections = () => {
             <div class="card mb-3">
                 <div class="row g-0 mt-5 pt-5" style={{backgroundColor: '#000002'}}>
                     <div class="col-md-4">
-                    <img  src="https://4.imimg.com/data4/VX/SN/MY-3520335/diamond-necklace-500x500.jpg" alt="..."/>
+                    <img className="img-fluid" src="https://4.imimg.com/data4/VX/SN/MY-3520335/diamond-necklace-500x500.jpg" alt="..."/>
                     </div>
                     <div class="col-md-8">
                     <div class="card-body" style={{textAlign: 'left'}}>

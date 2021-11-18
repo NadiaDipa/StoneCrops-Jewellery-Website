@@ -13,7 +13,7 @@ const MyOrder = () => {
 
     
     useEffect(() => {
-        fetch(`http://localhost:5000/allOrder/${email}`)
+        fetch(`https://still-beach-91758.herokuapp.com/allOrder/${email}`)
         .then((res) => res.json())
         .then((data) => setLists(data));
     }, [email]);
@@ -32,7 +32,7 @@ const MyOrder = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `http://localhost:5000/allOrder/${id}`;
+        const url = `https://still-beach-91758.herokuapp.com/allOrder/${id}`;
         fetch(url, {
           method: "DELETE",
         })

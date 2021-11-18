@@ -14,12 +14,14 @@ import ManageOrder from '../ManageOrder/ManageOrder';
 import MyOrder from '../MyOrder/MyOrder';
 import PayNow from '../PayNow/PayNow';
 import Reviews from '../Reviews/Reviews';
+import ManageProducts from '../ManageProducts/ManageProducts';
+import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
-    const { user, logOut } = useAuth();
+    const { user, logOut, admin } = useAuth();
     
     return (
 
@@ -31,7 +33,7 @@ const Dashboard = () => {
                 }}>
                     <Navbar.Brand style={{
                         color: 'orange'
-                    }} href="#home"><h4><b>DashBoard</b></h4></Navbar.Brand>
+                    }} href="#home"><h4 className="text-center"><b>DashBoard</b></h4></Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={HashLink} to="#login"><h5 style={{
@@ -45,13 +47,21 @@ const Dashboard = () => {
                     <div className="col-md-3 border">
                         <Link to={`${url}`}><h5>Dashboard</h5></Link>
                         <hr />
-                        <Link to={`${url}/addNewProduct`}><h5>Add New Product</h5></Link>
-                        <hr />
-                        <Link to={`${url}/manageOrder`}><h5>Manage All Order</h5></Link>
-                        <hr />
+                        
+                        {admin && <>
+                            <Link to={`${url}/addNewProduct`}><h5>Add New Product</h5></Link>
+                            <hr />
+                            <Link to={`${url}/manageOrder`}><h5>Manage All Order</h5></Link>
+                            <hr />
+                            <Link to={`${url}/manageProducts`}><h5>Manage Products</h5></Link>
+                            <hr />
+                            <Link to={`${url}/admin`}><h5>Admin</h5></Link>
+                            <hr />
+                            </>
+                        }
+
+
                         <Link to={`${url}/myOrder`}><h5>My Order</h5></Link>
-                        <hr />
-                        <Link to={`${url}/admin`}><h5>Admin</h5></Link>
                         <hr />
                         <Link to={`${url}/payNow`}><h5>Pay Now</h5></Link>
                         <hr />
@@ -68,19 +78,20 @@ const Dashboard = () => {
                             {/* <Route path={`${path}/addProduct`}>
                                 <AddProduct></AddProduct>
                             </Route> */}
-                            <Route path={`${path}/manageOrder`}>
+                            <AdminRoute path={`${path}/manageOrder`}>
                                 <ManageOrder></ManageOrder>
-                            </Route>
-                            <Route path={`${path}/myOrder`}>
-                                <MyOrder></MyOrder>
-                            </Route>
-                           <Route path={`${path}/addNewProduct`}>
+                            </AdminRoute>
+                          
+                           <AdminRoute path={`${path}/addNewProduct`}>
                                 <AddNewProduct></AddNewProduct>
-                            </Route>
-                            <Route path={`${path}/admin`}>
+                            </AdminRoute>
+                            <AdminRoute path={`${path}/manageProducts`}>
+                                <ManageProducts></ManageProducts>
+                            </AdminRoute>
+                            <AdminRoute path={`${path}/admin`}>
                                 <MakeAdmin></MakeAdmin>
-                            </Route>
-                             <Route path={`${path}/payNow`}>
+                            </AdminRoute>
+                            <Route path={`${path}/payNow`}>
                                 <PayNow></PayNow>
                             </Route>
                             {/* <Route path={`${path}/paynow`}>
@@ -88,6 +99,9 @@ const Dashboard = () => {
                             </Route> */}
                             <Route path={`${path}/reviews`}>
                                 <Reviews></Reviews>
+                            </Route>
+                            <Route path={`${path}/myOrder`}>
+                                <MyOrder></MyOrder>
                             </Route>
                            
                         </Switch> 
