@@ -54,6 +54,7 @@ const Booking = () => {
           <div className="col-sm-12 col-md-6 col-lg-6">
             <div className="card mb-3" style={{ maxWidth: "540px" }}>
               <div className="row g-0">
+
                 <div className="col-md-4">
                   <img
                     src={products?.image}

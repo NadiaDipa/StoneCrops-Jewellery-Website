@@ -5,7 +5,7 @@ const RareCollections = () => {
     return (
         <Fade left>
         <div>
-            <div class="card mb-3">
+            <div class="card mb-3 shadow-lg">
                 <div class="row g-0 mt-5 pt-5" style={{backgroundColor: '#000002'}}>
                     <div class="col-md-4">
                     <img className="img-fluid" src="https://4.imimg.com/data4/VX/SN/MY-3520335/diamond-necklace-500x500.jpg" alt="..."/>
