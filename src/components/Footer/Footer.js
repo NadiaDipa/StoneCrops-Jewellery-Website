@@ -90,7 +90,7 @@ const Footer = () => {
                         <div class="container">
                            
                             </div>
-                    <section class="">
+                        <section class="">
                            <div className="icons fs-3">
                                 <FontAwesomeIcon
                                     className="mx-1 text-success"
@@ -109,8 +109,8 @@ const Footer = () => {
                                     icon={faYoutubeSquare}
                                 />{" "}
                             </div>
-                    </section>
-                </div>
+                        </section>
+                    </div>
                 </div>
 
                

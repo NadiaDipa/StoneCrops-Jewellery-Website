@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
 import useAuth from "../../../Hooks/useAuth";
+import Swal from 'sweetalert2';
 
 const Booking = () => {
   const { id } = useParams();
@@ -29,7 +30,7 @@ const Booking = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.insertedId) {
-          alert("order successfully taken");
+          Swal.fire("order successfully taken");
 
           reset();
         }

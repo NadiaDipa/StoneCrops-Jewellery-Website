@@ -82,20 +82,20 @@ const ManageOrder = () => {
     return (
         <div>
             <div>
-                <h1 className="text-center mb-5 mt-5 text-danger headline mx-auto">Manage All Orders</h1>
+                <h1 className="text-center w-50 border-bottom border-dark mb-5 mt-5 headline mx-auto">Manage All Orders</h1>
             </div>
-            <div className="container bg-dark">
-        <Table striped bordered hover responsive="sm" className="my-3">
+            <div className="container">
+        <Table striped bordered hover responsive="sm" className="my-3 bg-dark">
           <thead>
             <tr>
               {Array.from({ length: 1 }).map((_, index) => (
-                <th className="text-white" key={index}>
-                  BUYER
+                <th className="text-white bg-dark" key={index}>
+                  BUYER NAME
                 </th>
               ))}
 
               {Array.from({ length: 1 }).map((_, index) => (
-                <th className="text-white" key={index}>
+                <th className="text-white bg-dark" key={index}>
                   {" "}
                   PRODUCT ID{" "}
                 </th>
@@ -153,7 +153,7 @@ const ManageOrder = () => {
                 ))} */}
 
                 {Array.from({ length: 1 }).map((_, index) => (
-                  <td className="fw-bold text-white " key={index}>
+                  <td className="fw-bold text-light " key={index}>
                     {allOrder?.status}
                   </td>
                 ))}
@@ -161,7 +161,7 @@ const ManageOrder = () => {
                   <td key={index}>
                     <button
                       onClick={() => deleteId(allOrder._id)}
-                      className="mx-3 text-danger"
+                      className="mx-3 text-light bg-dark"
                     >
                       <FontAwesomeIcon icon={faTrash} />
                     </button>
@@ -171,7 +171,7 @@ const ManageOrder = () => {
                   <td key={index} className="align-middle">
                     <button
                       onClick={() => confirmID(allOrder._id)}
-                      className="mx-3 text-success"
+                      className="mx-3 text-light bg-dark"
                     >
                       <FontAwesomeIcon icon={faCheckCircle} />
                     </button>

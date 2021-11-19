@@ -39,7 +39,7 @@ const ManageProducts = () => {
                     });
                 };
         return (
-            <div className="my-order-section bg-dark">
+            <div className="my-order-section bg-dark mt-3">
                 <div className="text-center fw-bold text-white">
                     <h1>Manage All Products</h1>
                     <h4>Total Products: {products.length}</h4>

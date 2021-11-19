@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 
 const AddNewProduct = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -16,28 +17,28 @@ const AddNewProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data?.insertedId) {
-          alert("uploaded successfully");
+          Swal.fire("Uploaded Successfully");
           reset();
         }
       });
   };
     return (
-        <div className=" add-container ">
-        <h3 className="text-center text-dark text-white fw-bold">Add A Product</h3>
-        <div className="data-form">
+        <div className=" add-container">
+        <h3 style={{letterSpacing:'2px'}} className="text-center text-dark text-dark fw-bold border-bottom border-dark w-25 mx-auto mt-5">Add A Product</h3>
+        <div className="data-form mt-4">
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* name */}
           <input
             {...register("name")}
-            placeholder="Product Name"
+            placeholder="Enter Your Product Name"
             className="p-2 m-2 w-50 text-center"
             required
           />
 
-          {/* price */}
+          {/* details */}
           <input
             {...register("description")}
-            placeholder="Details"
+            placeholder="Enter Product Details"
             className="p-2 m-2 w-50 text-center "
             required
           />
@@ -53,7 +54,7 @@ const AddNewProduct = () => {
           {/* price */}
           <input
             {...register("price")}
-            placeholder="Price"
+            placeholder="Enter Product Price"
             className="p-2 m-2 w-50 text-center "
             required
           />
@@ -61,7 +62,7 @@ const AddNewProduct = () => {
           <input
             type="submit"
             value="Add Product"
-            className="fw-bold  text-muted p-2 m-2 w-50"
+            className="fw-bold text-light bg-dark p-2 m-2 w-50"
           />
         </form>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from "react-bootstrap";
 import Swal from "sweetalert2";
-// import admin from "./../../../images/admin.png";
+import admin from "./../../../assets/admin.jpg";
 import { useForm } from "react-hook-form";
 
 const MakeAdmin = () => {
@@ -25,24 +25,24 @@ const MakeAdmin = () => {
   };
     return (
         <Container>
-      <div className="row align-items-center">
-        <div className="col-sm-12 col-lg-6">
-          {/* <img className="img-fluid w-75 " src={admin} alt="" /> */}
+      <div className="row align-items-center bg-light mt-4">
+        <div className="col-sm-12 col-lg-6 mt-4">
+          <img className="img-fluid mt-5" src={admin} alt="" />
         </div>
         <div className="text-center col-sm-12 col-lg-6">
-          <h1 className="fw-bold">Feeling Alone?</h1>
-          <h3>Want To Make An Admin</h3>
+          <h1 className="fw-bold">Do You Want To Make Another <span className="fw-bold">Admin?</span></h1>
           <div className="mt-5">
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
-                className="p-2 m-2 w-50"
+                  className="p-2 m-2"
+                  placeholder="Create An Admin..."
                 defaultValue=""
                 {...register("email", { required: true })}
               />
               <input
-                className="btn btn-primary w-50"
+                className="btn btn-dark fs-6 pe-3 pt-2 pb-2"
                 type="submit"
-                value="send"
+                value="Submit"
               />
             </form>
           </div>

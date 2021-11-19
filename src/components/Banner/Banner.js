@@ -38,6 +38,43 @@ const Banner = () => {
                 </button>
               </div>
             </div>
+
+
+            // extra
+      // <div class="row ">
+      //           <div class="col ">
+      //               <div class="card bg-dark text-light">
+      //                   <div class="card-body">
+      //                       <h5 class="card-title">Card title</h5>
+      //                       <p class="card-text">This is a short card.</p>
+      //                   </div>
+      //               </div>
+      //           </div>
+      //           <div class="col">
+      //               <div class="card bg-dark text-light">
+      //                   <div class="card-body">
+      //                       <h5 class="card-title">Card title</h5>
+      //                       <p class="card-text">This is a short card.</p>
+      //                   </div>
+      //               </div>
+      //           </div>
+      //           <div class="col">
+      //               <div class="card bg-dark text-light">
+      //                   <div class="card-body">
+      //                       <h5 class="card-title">Card title</h5>
+      //                       <p class="card-text">This is a short card.</p>
+      //                   </div>
+      //               </div>
+      //           </div>
+      //           <div class="col">
+      //               <div class="card bg-dark text-light" >
+      //                   <div class="card-body">
+      //                       <h5 class="card-title">Card title</h5>
+      //                       <p class="card-text">This is a short card.</p>
+      //                   </div>
+      //               </div>
+      //           </div>
+      //       </div>
       
     );
 };
