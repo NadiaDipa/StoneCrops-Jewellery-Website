@@ -23,7 +23,7 @@ const Login = () => {
   const location = useLocation();
   const redirect = location?.state?.from || "/home";
   return (
-        <div className="pb-5" style={{backgroundColor:'#424243'}}>
+        <div className="pb-5 bg-light">
             <div class="row">
               <div class="col">
                 <img className="img-fluid" height="550px" width="100%" src ={loginImg}
@@ -33,9 +33,9 @@ const Login = () => {
               <div class="col login-style shadow-lg m-5 rounded">
                   <Container>
                     <div className="text-center">
-                      <h1 className="pt-5 text-light headline" style={{ letterSpacing: "3px", fontWeight: "700", borderBottom: '2px solid #bba151', borderBottomWidth: '10%' }}>
+                      <h1 className="pt-5 text-light" style={{ letterSpacing: "3px", fontWeight: "700" }}>
                         {" "}
-                        <span style={{color:'#bba151'}}>LOG IN</span> HERE
+                        <span className="text-dark text-center">LOG IN</span> HERE
                       </h1>
                       
                       <p className="text-danger text-center">{error}</p>
@@ -74,9 +74,9 @@ const Login = () => {
                         />
 
                         <input
-                          className="btn w-50 m-2 fs-5 fw-bold btn btn-outline-light mb-4 subscribe-btn"
+                          className="btn w-50 m-2 fs-5 fw-bold btn btn-dark mb-4 subscribe-btn"
                           type="submit"
-                          style={{color:'#bba151', backgroundColor: '#0c0c0c'}}
+                          style={{ backgroundColor: '#0c0c0c'}}
                           value="LOGIN"
                         />
                 
@@ -85,11 +85,11 @@ const Login = () => {
                         
                         </form>
                         <Link
-                          className="text-light"
+                          className="text-dark"
                           style={{ textDecoration: "none" }}
                           to="/signUp"
                         >
-                        <small>Don't have an Account? Please <span className="fw-bold fs-6" style={{color:'#bba151'}}>Register</span></small>
+                        <small>Don't have an Account? Please <span className="fw-bold fs-6 text-dark" >Register</span></small>
                       </Link>
                     </div>
                   </Container>

@@ -8,9 +8,9 @@ const Registration = () => {
     useAuth();
   const history = useHistory();
   return (
-    <div className="container-fluid pt-5 shadow-lg" style={{backgroundColor:'#424243'}}>
+    <div className="container-fluid pt-5 shadow-lg mt-5 me-5 pb-4 bg-light">
       <Container>
-        <div className="text-light">
+        <div className="">
           <h1 style={{ letterSpacing: "3px", fontWeight: "500" }}>
             {" "}
             <span style={{color:'#bba151'}}>REGISTER</span> HERE
@@ -67,10 +67,10 @@ const Registration = () => {
           </form>
           <Link
             className="text-light"
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: "none", paddingBottom:'15px' }}
             to="/login"
           >
-            <small>Already Registered? <span className="fw-bold fs-6" style={{color:'#bba151'}}>Login</span></small>
+            <small className="text-dark">Already Registered? <span className="fw-bold fs-6">Login</span></small>
           </Link>
         </div>
       </Container>
