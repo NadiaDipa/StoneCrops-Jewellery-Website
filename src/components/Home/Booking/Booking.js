@@ -45,9 +45,9 @@ const Booking = () => {
   const { user } = useAuth();
   const { email, displayName } = user;
   return (
-    <div className="container-fluid order-section" style={{backgroundColor:'#424243'}}>
+    <div className="container-fluid order-section bg-light mt-5">
       <div className="container py-5">
-        <h1 className="text-center mb-5 fw-bold border-light border-bottom w-50 mx-auto" style={{ color: '#bba151' }}>
+        <h1 className="text-center mb-5 fw-bold border-dark border-bottom w-50 mx-auto text-dark">
           PLACE YOUR ORDER
         </h1>
         <div className="row mx-auto align-items-center">
@@ -63,14 +63,14 @@ const Booking = () => {
                 </div>
                   <div className="col-md-8">
                     <div className="card-body text-center">
-                      <h5 className="card-title ">{products?.name}</h5>
+                      <h3 className="card-title fw-bold">{products?.name}</h3>
 
                       
                       <p className="card-text m-0">
                         Model: {products?.description}
                       </p>
                       
-                      <p className="card-text m-0">
+                      <p className="card-text m-0 text-danger">
                         Price: {products?.price}.
                       </p>
 

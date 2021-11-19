@@ -8,7 +8,7 @@ const PayNow = () => {
                 <img src={payment} alt="" />
             </div>
             <h1 style={{letterSpacing:'5px'}} className="fw-bold">SORRY!!!</h1>
-            <h3 style={{letterSpacing:'5px'}} className="fw-bold">Payment Coming Soon...</h3>
+            <h3 style={{letterSpacing:'5px'}} className="fw-bold mb-5">Payment Coming Soon...</h3>
         </div>
     );
 };

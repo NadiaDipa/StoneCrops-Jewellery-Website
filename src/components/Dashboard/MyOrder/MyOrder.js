@@ -110,15 +110,15 @@ const MyOrder = () => {
                 ))} */}
 
                 {Array.from({ length: 1 }).map((_, index) => (
-                  <td className="fw-bold text-white " key={index}>
+                  <td className="fw-bold text-white" key={index}>
                     {list?.status}
                   </td>
                 ))}
                 {Array.from({ length: 1 }).map((_, index) => (
-                  <td key={index} className="">
+                  <td key={index}>
                     <button
                       onClick={() => deleteId(list._id)}
-                      className="mx-3 text-danger "
+                      className="mx-3 text-light bg-dark"
                     >
                       <FontAwesomeIcon icon={faTrash} />
                     </button>

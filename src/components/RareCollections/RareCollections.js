@@ -1,7 +1,9 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 
 const RareCollections = () => {
     return (
+        <Fade left>
         <div>
             <div class="card mb-3">
                 <div class="row g-0 mt-5 pt-5" style={{backgroundColor: '#000002'}}>
@@ -27,6 +29,7 @@ const RareCollections = () => {
                 </div>
             </div>
         </div>
+        </Fade>
     );
 };
 

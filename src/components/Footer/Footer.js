@@ -70,7 +70,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     
-                    <div className="text-danger">
+                    <div>
                         <h5 className=" ms-4 mb-3" style={{color: '#bba151'}}>NEED HELP</h5>
                         <ul>
                             <Link className="footer-ancor-link footer-item text-white" to="/home"><li>Your Account</li></Link>
@@ -87,25 +87,24 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-6"><p className="text-center text-light fs-6 mt-4">Copyright &copy; 2021 <span style={{ color: '#bba151' }}>StoneCrops</span></p></div>
                     <div class="container pt-4 col-6">
-                        <div class="container">
-                           
-                            </div>
-                        <section class="">
-                           <div className="icons fs-3">
+                        
+                        <section>
+                            <small className="text-white">Follow Us</small>
+                            <div className="icons fs-3">
                                 <FontAwesomeIcon
-                                    className="mx-1 text-success"
+                                    className="mx-1 text-light"
                                     icon={faFacebookSquare}
                                 />{" "}
                                 <FontAwesomeIcon
-                                    className="mx-1 text-danger"
+                                    className="mx-1 text-light"
                                     icon={faInstagramSquare}
                                 />{" "}
                                 <FontAwesomeIcon
-                                    className="mx-1 text-info"
+                                    className="mx-1 text-light"
                                     icon={faTwitterSquare}
                                 />{" "}
                                 <FontAwesomeIcon
-                                    className="mx-1 text-danger"
+                                    className="mx-1 text-light"
                                     icon={faYoutubeSquare}
                                 />{" "}
                             </div>
