@@ -40,22 +40,23 @@ const Reviews = () => {
   }
     return (
         <div
-      className="container-fluid "
+      className="container-fluid"
      
     >
       <h1 className="pt-5 fw-bold" >
-        Give your Review
+        Give Your Review Here
       </h1>
 
-      <div className="row mx-auto py-5">
+      <div className="row mx-auto py-5 ">
         <div className="col-md-6 col-sm-12 align-self-center">
-          {/* <img className="img-fluid w-75 rounded-3" src={review} alt="" /> */}
+          <img className="img-fluid" style={{height: '400px'}} src="https://image.freepik.com/free-vector/happy-man-holding-five-golden-stars-customer-review-social-media-flat-illustration_74855-14060.jpg" alt="" />
         </div>
 
         <div className="col-md-6 col-sm-12">
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
               {...register("name")}
+              placeholder="Enter Your Name"
               className="p-2 m-2 w-75 border border-dark rounded-2"
               defaultValue={user?.Name}
             />
@@ -70,7 +71,7 @@ const Reviews = () => {
             <input
               {...register("rating")}
               className="p-2 m-2 w-75 border border-dark rounded-2"
-              placeholder="Give your ratting 1-5"
+              placeholder="Give your rating 1-5"
               required
             />
 
@@ -79,15 +80,15 @@ const Reviews = () => {
               rows="5"
               cols="15"
               className="p-2 m-2 w-75 border border-dark rounded-2"
-              placeholder="Write your experience"
+              placeholder="Write your experience here..."
               required
             />
 
             <input
               type="submit"
-              value="Send"
-              className="btn w-75 rounded-2 text-white"
-              style={{ backgroundColor: "#163336" }}
+              value="SEND REVIEW"
+              className="btn w-75 bg-dark fw-bold rounded-2 text-white pt-2 pb-2"
+              
             />
           </form>
         </div>

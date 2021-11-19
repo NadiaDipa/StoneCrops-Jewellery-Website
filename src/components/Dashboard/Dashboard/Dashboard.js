@@ -71,7 +71,7 @@ const Dashboard = () => {
                             <hr />
                             <Link style={{textDecoration:'none', letterSpacing:'2px'}} to={`${url}/reviews`}><h5 className="text-light">Add Feedback</h5></Link>
                             <hr />
-                            <Button className="mb-5" onClick={logOut} >Logout </Button>
+                            <Button className="mb-5 btn btn-secondary fw-bold fs-5" style={{letterSpacing:'5px'}} onClick={logOut} >LogOut </Button>
                         
                     </div>
                     </Fade>
